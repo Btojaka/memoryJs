@@ -1,0 +1,56 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripcion" content="Juego de memoria" />
+    <title>Memory</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <script src="./memorygame.js"></script>
+</head>
+<body>
+    <h1>Memory</h1>
+    <div id="alerta" class="modo">
+
+        <!-- contenido -->
+        <div class="contenido">
+            <p>¡El juego ha terminado!</p>
+            <button id="miboton">Nueva partida</button>
+        </div>
+
+    </div>
+
+    <div id="miModo" class="modo">
+
+        <!-- contenido -->
+        <div class="contenido">
+            <p>¡A jugar!<br><br>
+            Hay 8 pares de cartas en el tablero. Busca las cartas que sean iguales 
+            y consigue la máxima puntuación en el menor tiempo posible. <br>
+            ¡Tu puedes conseguirlo!
+            </p>
+        </div>
+
+    </div>
+
+    <h3>Puntuación: <span id="resultado"></span></h3>
+    
+    <div class="cuadricula">
+    </div>
+
+    <div class="extras">
+
+        <div>
+            <h4>Movimientos: <span id="contador"></span> </h4>
+        </div>
+        <div>
+            <h4>Tiempo: <span id="tempo"></span> </h4>
+        </div>
+
+
+    </div>
+    
+
+</body>
+</html>

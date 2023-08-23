@@ -1,0 +1,121 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Paytone One', sans-serif;
+    /*overflow: hidden;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* The Modal (background) */
+.modo {
+
+    display: block; 
+    position: fixed; /* quedarse fijo en el sitio */
+    z-index: 1; /* poner arriba */
+    left: 0;
+    top: 0;
+    width: 100%; /* total de ancho */
+    height: 100%; /* total de altura */
+    overflow: auto; /* Habilita el scroll si es necesario */
+    background-color: violet; /* color de reserva */
+    background-color: rgba(228, 169, 210, 0.3); /* rosa con opacidad */
+    transition: all ease-in 1s;
+}
+#alerta {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+  /* Modal Content/Box */
+.contenido {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde la parte superior y el centro */
+    padding: 20px;
+    border: 1px solid purple;
+    border-radius: 0.5rem;
+    width: 80%; /* Puede ser más o menos, dependiendo del tamaño de la pantalla */
+}
+
+.contenido p {
+    text-align: center;
+    color: purple;
+    font-size: 1.5vw;
+}
+
+#miboton {
+    padding: 0.5rem;
+    font-weight: 400;
+    color: purple;
+    background: white;
+    font-size: 1.2vw;
+    border-radius: 0.5rem;
+    position: relative;
+    /* center the button */
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: all ease 2s;
+}
+
+#miboton:hover {
+    background-color: purple;
+    color: white;
+    font-weight: 400;
+}
+
+
+/* contador, temporizador y resultado */
+.extras {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 80vw;
+}
+
+h1 {
+    font-size: 30px;
+    color:slateblue;
+    text-align: center;
+    margin: 2px;
+}
+
+h3, #resultado  {
+    font-size: 25px;
+    font-weight: 400px;
+    margin: 2px;
+}
+
+h4 {
+    font-size: 20px;
+    display: block;
+}
+
+#resultado, #contador, #tempo {
+    color: violet;
+}
+
+
+/* Espacio para las tarjetas */
+.cuadricula {
+    display: block; /* la visualización de la agrupación sea fija  */ 
+    flex-wrap: wrap; /* agrupación de los elementos */
+    align-items: center;
+    justify-content: center;
+    height: 470px;
+    width: 500px;
+    margin: auto;
+}
+
+/* Estilo de las tarjetas */
+.miestilo {
+    box-shadow:  5px 5px #ccc;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5rem;
+    width: 90px;
+    height: 90px;
+}
