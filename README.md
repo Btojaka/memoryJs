@@ -53,6 +53,8 @@ The cards feature images of **wizards, fairies, and magical creatures**, making 
 
 Here’s the file structure of the project:
 
+MEMORY_JS/ │ ├── images/ # Folder containing the card images │ ├── 1wizard.svg │ ├── 2dwarf.svg │ ├── 3elf.svg │ ├── 4queen.svg │ ├── 5prince.svg │ ├── 6fprince.svg │ ├── 7fairy.svg │ ├── 8unicorn.svg │ ├── colors.svg # Back of the cards │ └── white.svg # White card for matched pairs │ ├── index.html # Main file for the game interface ├── memoryGame.js # Game logic ├── styles.css # Game styles └── README.md # Project description
+
 
 ## 🚀 How to Play
 
