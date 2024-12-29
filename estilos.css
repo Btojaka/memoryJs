@@ -1,121 +1,128 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Paytone One', sans-serif;
-    /*overflow: hidden;*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-}
-
-/* The Modal (background) */
-.modo {
-
-    display: block; 
-    position: fixed; /* quedarse fijo en el sitio */
-    z-index: 1; /* poner arriba */
-    left: 0;
-    top: 0;
-    width: 100%; /* total de ancho */
-    height: 100%; /* total de altura */
-    overflow: auto; /* Habilita el scroll si es necesario */
-    background-color: violet; /* color de reserva */
-    background-color: rgba(228, 169, 210, 0.3); /* rosa con opacidad */
-    transition: all ease-in 1s;
-}
-#alerta {
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-  /* Modal Content/Box */
-.contenido {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% desde la parte superior y el centro */
-    padding: 20px;
-    border: 1px solid purple;
-    border-radius: 0.5rem;
-    width: 80%; /* Puede ser más o menos, dependiendo del tamaño de la pantalla */
-}
-
-.contenido p {
-    text-align: center;
-    color: purple;
-    font-size: 1.5vw;
-}
-
-#miboton {
-    padding: 0.5rem;
-    font-weight: 400;
-    color: purple;
-    background: white;
-    font-size: 1.2vw;
-    border-radius: 0.5rem;
-    position: relative;
-    /* center the button */
-    left: 50%;
-    transform: translate(-50%, 0%);
-    transition: all ease 2s;
-}
-
-#miboton:hover {
-    background-color: purple;
-    color: white;
-    font-weight: 400;
-}
-
-
-/* contador, temporizador y resultado */
-.extras {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-width: 80vw;
+  margin: 0;
+  padding: 0;
+  font-family: "Paytone One", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  color: #4b0082; /* Slate blue */
+  height: 100vh;
+  overflow: hidden; /* Evitar scroll innecesario */
 }
 
 h1 {
-    font-size: 30px;
-    color:slateblue;
-    text-align: center;
-    margin: 2px;
+  font-size: 2.5rem;
+  color: #4b0082;
+  margin: 1rem 0;
+  text-align: center;
 }
 
-h3, #resultado  {
-    font-size: 25px;
-    font-weight: 400px;
-    margin: 2px;
-}
-
+h3,
 h4 {
-    font-size: 20px;
-    display: block;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  text-align: center;
 }
 
-#resultado, #contador, #tempo {
-    color: violet;
+#resultado,
+#contador,
+#tempo {
+  color: #e69aca; /* Violet */
+  font-weight: bold;
 }
 
+.extras {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 600px;
+  margin: 1rem auto;
+}
 
-/* Espacio para las tarjetas */
+/* Modal (background) */
+.modo {
+  display: none; /* Ocultar inicialmente */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(228, 169, 210, 0.5); /* Fondo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#alerta {
+  display: none; /* Hidden by default */
+}
+
+/* Modal Content */
+.contenido {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.contenido p {
+  color: #4b0082;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+#miboton {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4b0082;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#miboton:hover {
+  background-color: #e69aca;
+  color: #4b0082;
+}
+
+/* Game Board (Responsive) */
 .cuadricula {
-    display: block; /* la visualización de la agrupación sea fija  */ 
-    flex-wrap: wrap; /* agrupación de los elementos */
-    align-items: center;
-    justify-content: center;
-    height: 470px;
-    width: 500px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-/* Estilo de las tarjetas */
+/* Cards */
 .miestilo {
-    box-shadow:  5px 5px #ccc;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 5rem;
-    width: 90px;
-    height: 90px;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.miestilo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
