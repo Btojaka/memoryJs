@@ -2,13 +2,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // captura el modo
     let modo = document.getElementById("miModo");
     
-      // Cuando el usuario clica el cuadro de diálogo desaparece
-      window.onclick = function (elemento) {
-        if (elemento.target == modo) {
-          modo.style.display = "none";
-        }
-        };
+      // Temporizador y su referencia
+  let tempo = 0;
+  let temporizador; // Referencia del temporizador
 
+  // Cuando el usuario clica el cuadro de diálogo desaparece
+  window.onclick = function (elemento) {
+    if (elemento.target == modo) {
+      modo.style.display = "none";
+
+      // Inicia el temporizador
+      temporizador = setInterval(() => {
+        tempo++;
+        console.log(tempo);
+        document.querySelector("#tempo").textContent = tempo;
+      }, 1000);
+    }
+  };
     // Opciones de las cartas
     const wizard = {
         name: "wizard",
@@ -76,14 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let cartasElegidas = [];
     let cartasElegidasId = [];
     const cartasGanadas = [];
-
-    // temporizador
-    let tempo = 0;
-    setInterval(() => {
-        tempo++;
-        console.log(tempo);
-        document.querySelector("#tempo").textContent = tempo;
-    }, 1000);
 
     // contador
     let contador = 0;
